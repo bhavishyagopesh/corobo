@@ -25,6 +25,7 @@ script:
   - python -m pytest
   - docker build -t "corobo" .
   - docker images
+  - docker run coala/base coala --ci
   - >
     docker run --user root corobo /bin/sh -c "
         set -e -x
